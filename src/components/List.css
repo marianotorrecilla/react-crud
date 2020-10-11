@@ -1,0 +1,15 @@
+table {
+    background-color: #000000;
+}
+
+th {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+td {
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon {
+    color: seagreen;
+}
