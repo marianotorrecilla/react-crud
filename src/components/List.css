@@ -2,14 +2,21 @@ table {
     background-color: #000000;
 }
 
-th {
+th, .modal-title {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-td {
+td, .modal-body {
     font-family: 'Roboto', sans-serif;
 }
 
 .icon {
     color: seagreen;
+}
+.trash {
+    color: red;
+}
+
+.modal-title, .modal-body {
+    color: black;
 }

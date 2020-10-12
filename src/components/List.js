@@ -4,9 +4,6 @@ import './List.css';
 
 const List = (props) => {
 
-    //editar
-    
-
   return (
     <table className="col-12 mt-5 table text-white">
         <thead>
@@ -25,7 +22,28 @@ const List = (props) => {
                     <td>{bici.modelo}</td>
                     <td>${bici.precio}</td>
                     <td><button type="submit" className="btn btn-success" onClick={()=>{props.editBici(bici)}}>Edit</button></td>
-                    <td><button type="submit" className="btn btn-danger" onClick={()=>{props.deleteBici(bici.id)}}>Delete</button></td>
+                    <td>
+                        <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" >Delete</button>
+                        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div className="modal-dialog">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h5 className="modal-title" id="exampleModalLabel">Eliminar Producto</h5>
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div className="modal-body">
+                                        Si desea ELIMINAR el producto, presione DELETE. Caso contrario, presione VOLVER.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" className="btn btn-dark" data-dismiss="modal">Volver</button>
+                                        <button type="submit" className="btn btn-danger" data-dismiss="modal" onClick={()=>{props.deleteBici(bici.id)}}>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             ))
             }
@@ -37,8 +55,4 @@ const List = (props) => {
 export default List;
 
 //<td><a type="submit" className="icon" onClick={()=>{props.editBici(bici)}}> <ion-icon name="pencil-outline"></ion-icon></a></td>
-//<td><a type="submit" className="icon" onClick={()=>{props.deleteBici(bici.id)}}> <ion-icon name="trash-outline"></ion-icon></a></td>
-
-//<td><button type="submit" className="btn btn-success" onClick={()=>{props.editBici(bici)}}>Edit</button></td>
-
-//<td><button type="submit" className="btn btn-danger" onClick={()=>{props.deleteBici(bici.id)}}>Delete</button></td>
+//<td><a type="submit" className="trash" onClick={()=>{props.deleteBici(bici.id)}}> <ion-icon name="trash-outline"></ion-icon></a></td>

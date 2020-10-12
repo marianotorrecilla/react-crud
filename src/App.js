@@ -5,10 +5,11 @@ import List from './components/List';
 import Edit from './components/Edit';
 import './App.css'
 
+
 function App() {
   const [bicicletas, setBicicletas] = useState([]);
 
-  //Agregar
+  //Crear
   const addBicis = (bicicleta) => {
     setBicicletas([...bicicletas,bicicleta])
   }

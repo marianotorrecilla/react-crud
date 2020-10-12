@@ -1,7 +1,5 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import Error from './Error';
-
 
 const Edit = (props) => {
 
@@ -72,15 +70,3 @@ const Edit = (props) => {
 
 export default Edit;
 
-/*const {register, errors, handleSubmit, setValue} = useForm({
-  defaultValues: props.currentUser
-});
-
-setValue('marca', props.currentUser.marca);
-setValue('modelo', props.currentUser.modelo);
-setValue('precio', props.currentUser.precio);
-
-const onSubmit = (data, e) => {
-  console.log(data);
-  e.target.reset();
-}*/
